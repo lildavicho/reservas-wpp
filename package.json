@@ -1,0 +1,28 @@
+{
+  "name": "misa-whatsapp",
+  "version": "0.1.0",
+  "description": "Servicio independiente para preparar recordatorios de reservas de misa por WhatsApp.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "whatsapp": "node src/whatsapp/run.js",
+    "whatsapp:test": "node src/whatsapp/manualTest.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "pino": "^9.6.0",
+    "node-cron": "^4.2.1",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.34.7"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.9"
+  }
+}
