@@ -112,14 +112,14 @@ La sesión persistida contiene credenciales sensibles y nunca debe copiarse al r
 Esta orden envía un mensaje real y requiere una confirmación explícita:
 
 ```bash
-WHATSAPP_MANUAL_TEST_CONFIRM=YES npm run whatsapp:test -- 593991234567 "Mensaje de prueba"
+WHATSAPP_MANUAL_TEST_CONFIRM=YES npm run whatsapp:test -- 593990000000 "Mensaje de prueba"
 ```
 
 En PowerShell:
 
 ```powershell
 $env:WHATSAPP_MANUAL_TEST_CONFIRM = "YES"
-npm run whatsapp:test -- 593991234567 "Mensaje de prueba"
+npm run whatsapp:test -- 593990000000 "Mensaje de prueba"
 ```
 
 La prueba no se habilita por defecto, no forma parte del scheduler y no registra el teléfono completo.
@@ -196,7 +196,7 @@ La respuesta de `due` debe ser un array JSON con al menos:
   {
     "id": 123,
     "nombre": "María Rodríguez",
-    "telefono": "0991234567",
+    "telefono": "0990000000",
     "fecha_misa": "2026-09-10",
     "hora_misa": "14:00",
     "lugar": "Parroquia X",

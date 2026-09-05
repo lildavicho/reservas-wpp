@@ -27,7 +27,7 @@ describe('reminder job', () => {
       getDueReminders: vi.fn().mockResolvedValue([{
         id: 44,
         nombre: 'María',
-        telefono: '0991234567',
+        telefono: '0990000000',
         fecha_misa: '2026-09-10',
         hora_misa: '14:00',
         lugar: 'Parroquia X'
@@ -48,7 +48,7 @@ describe('reminder job', () => {
 
     await expect(service.processDueReminders()).resolves.toMatchObject({ processed: 1 });
     expect(whatsappClient.sendMessage).toHaveBeenCalledWith(
-      '593991234567@c.us',
+      '593990000000@c.us',
       expect.stringContaining('Hola María')
     );
     expect(laravelClient.markSent).toHaveBeenCalledWith(
@@ -77,7 +77,7 @@ describe('reminder job', () => {
       getDueReminders: vi.fn().mockResolvedValue([{
         id: 45,
         nombre: 'María',
-        telefono: '0991234567',
+        telefono: '0990000000',
         fecha_misa: '2026-09-10',
         hora_misa: '14:00',
         lugar: 'Parroquia X'

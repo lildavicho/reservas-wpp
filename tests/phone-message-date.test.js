@@ -5,8 +5,8 @@ import { formatMassDate } from '../src/utils/dates.js';
 
 describe('phoneNormalizer', () => {
   it('normaliza celulares ecuatorianos', () => {
-    expect(normalizeEcuadorPhone('0991234567')).toBe('593991234567');
-    expect(toWhatsAppId('0991234567')).toBe('593991234567@c.us');
+    expect(normalizeEcuadorPhone('0990000000')).toBe('593990000000');
+    expect(toWhatsAppId('0990000000')).toBe('593990000000@c.us');
   });
 
   it('rechaza números ecuatorianos inválidos', () => {

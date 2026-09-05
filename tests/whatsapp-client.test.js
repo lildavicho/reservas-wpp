@@ -56,7 +56,7 @@ describe('WhatsApp client', () => {
   it('no envía si WhatsApp no está listo', async () => {
     fakeClient.info = null;
 
-    await expect(sendManualMessage(fakeClient, '593991234567', 'Prueba'))
+    await expect(sendManualMessage(fakeClient, '593990000000', 'Prueba'))
       .rejects.toThrow('WhatsApp no está listo');
     expect(fakeClient.sendMessage).not.toHaveBeenCalled();
   });
@@ -73,13 +73,13 @@ describe('WhatsApp client', () => {
     expect(client.isReady()).toBe(true);
     handlers.get('disconnected')('logout');
 
-    await expect(sendManualMessage(client, '593991234567', 'Prueba'))
+    await expect(sendManualMessage(client, '593990000000', 'Prueba'))
       .rejects.toThrow('WhatsApp no está listo');
     expect(client.sendMessage).not.toHaveBeenCalled();
   });
 
   it('convierte un teléfono válido al chat id de WhatsApp', () => {
-    expect(toChatId('593 991 234 567')).toBe('593991234567@c.us');
+    expect(toChatId('593 990 000 000')).toBe('593990000000@c.us');
   });
 
   it('rechaza destinos claramente inválidos', () => {
